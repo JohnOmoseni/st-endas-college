@@ -1,0 +1,118 @@
+/* SVGS */
+.stroke-variant path {
+	stroke: var(--secondary) !important;
+}
+
+.nav-link:hover,
+.nav-link:hover * {
+	color: var(--foreground-variant);
+	stroke: var(--secondary) !important;
+}
+
+/* =====  REACT PHONE NUMBER INPUT OVERRIDES */
+.input-phone {
+	margin-top: 0 !important;
+	padding-right: 0 !important;
+	height: 2.75rem;
+	width: 100%;
+}
+
+.PhoneInputCountry {
+	padding-inline: 0.5rem 0.4rem !important;
+}
+
+.PhoneInputCountryIconImg {
+	/* display: none !important; */
+}
+
+.PhoneInputCountrySelectArrow {
+	margin-left: 0.5rem !important;
+}
+
+.input-phone input {
+	padding-left: 0.4rem;
+	position: relative;
+}
+
+.PhoneInputCountry::before {
+	content: "";
+	position: absolute;
+	bottom: 4px;
+	inset: 12px -6px 12px auto;
+	width: 1px;
+	background: var(--placeholder);
+}
+
+.PhoneInputInput {
+	outline: none;
+	background: inherit;
+	font-size: 14px;
+	color: var(--grey);
+	font-weight: 300;
+	height: 100%;
+	width: 100% !important;
+	padding-left: 0.5em;
+	text-overflow: ellipsis;
+}
+
+.PhoneInputInput::placeholder {
+	color: var(--grey);
+}
+
+/* SCROLLBAR */
+.scrollbar-thin {
+	/* #17191e thumb #454e5b track */
+	scrollbar-color: initial initial;
+	scrollbar-color: var(--scrollbar-thumb, initial)
+		var(--scrollbar-track, initial);
+	scrollbar-width: thin;
+}
+
+/* Remove scrollbar */
+.remove-scrollbar::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}
+
+.remove-scrollbar::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.remove-scrollbar::-webkit-scrollbar-thumb {
+	background: transparent;
+	border-radius: 0px;
+}
+
+.remove-scrollbar::-webkit-scrollbar {
+	display: none;
+}
+
+/* MULTISTEP FORM */
+.step:last-child .bullet::before,
+.step:last-child .bullet::after {
+	display: none;
+}
+
+.bullet::before,
+.bullet::after {
+	position: absolute;
+	content: "";
+	top: 50%;
+	left: 100%;
+	height: 3px;
+	border-radius: 999px;
+	background: #9ca3af;
+}
+
+.bullet.active::after {
+	background: var(--foreground-variant);
+	transform: scaleX(0);
+	transform-origin: left;
+	animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+	100% {
+		transform: scaleX(1);
+	}
+}
