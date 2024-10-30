@@ -5,7 +5,6 @@ import { MenuProps } from "@/types";
 import { Button } from "../components/CustomButton";
 import { navLinks } from "@/constants/dashboard-index";
 import NavLinks from "./NavLinks";
-import { Link } from "react-router-dom";
 
 function Menu({ openMenu, setOpenMenu }: MenuProps) {
   return (
@@ -41,9 +40,14 @@ function Menu({ openMenu, setOpenMenu }: MenuProps) {
             ))}
           </nav>
 
-          <Link to="/admission" className="mx-auto row-flex mt-auto">
-            <Button title="Get Started" className="!min-w-[100px] rounded-lg px-5" />
-          </Link>
+          <a
+            href="https://futurebridge.ng/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mx-auto row-flex mt-auto"
+          >
+            <Button title="Portal" className="!min-w-[100px] rounded-lg px-5" />
+          </a>
         </div>
       </motion.div>
     </motion.div>

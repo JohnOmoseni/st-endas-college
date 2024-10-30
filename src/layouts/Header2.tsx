@@ -4,7 +4,6 @@ import { Button } from "@/components/CustomButton";
 import { Dispatch, SetStateAction } from "react";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
-import { toast } from "sonner";
 import { navLinks } from "@/constants/dashboard-index";
 import NavLinks from "./NavLinks";
 
@@ -14,7 +13,7 @@ type HeaderProps = {
 
 function Header2({ setOpenMenu }: HeaderProps) {
   return (
-    <div className="relative z-10 flex min-h-[70px] max-sm:max-h-[80px] w-full px-3 py-1 shadow-sm">
+    <div className="sticky top-0 z-[99] bg-background-100 flex min-h-[70px] sm:min-h-[72px] max-h-[80px] w-full px-3 py-1 shadow">
       <div className="row-flex-btwn mx-auto gap-4 w-full">
         <div className="icon group sm:!hidden" onClick={() => setOpenMenu && setOpenMenu(true)}>
           <MenuIcon className="size-6 transition-all group-hover:scale-95" color="#333" />
@@ -32,16 +31,14 @@ function Header2({ setOpenMenu }: HeaderProps) {
           ))}
         </div>
 
-        <div className={cn("sm:row-flex hidden mr-[2%]")}>
-          <Button
-            title="Portal"
-            onClick={() => {
-              toast.info("Coming soon!");
-              return;
-            }}
-            className="!min-w-[180px] rounded-lg px-5 sm:px-7"
-          />
-        </div>
+        <a
+          href="https://futurebridge.ng/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={cn("sm:row-flex hidden mr-[2%]")}
+        >
+          <Button title="Portal" className="!min-w-[180px] rounded-lg px-5 sm:px-7" />
+        </a>
       </div>
     </div>
   );
