@@ -41,7 +41,7 @@ function Testimonials() {
                   {body}
                   <span
                     className={cn(
-                      "absolute bottom-0 w-2.5 text-end leading-[1.5] right-[0.15rem] whitespace-nowrap cursor-pointer z-50",
+                      "absolute bottom-0 w-2 text-center bg-red-400 leading-[1.5] right-[0.15rem] whitespace-nowrap cursor-pointer z-50",
                       lineClamp ? "inline-block " : "hidden"
                     )}
                     onClick={() => setLineClamp(!lineClamp)}

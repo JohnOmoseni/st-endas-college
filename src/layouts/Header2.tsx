@@ -13,9 +13,12 @@ type HeaderProps = {
 
 function Header2({ setOpenMenu }: HeaderProps) {
   return (
-    <div className="sticky top-0 z-[99] bg-background-100 flex min-h-[70px] sm:min-h-[72px] max-h-[80px] w-full px-3 py-1 shadow">
+    <div className="sticky top-0 z-[99] bg-background-100 flex min-h-[62px] sm:min-h-[72px] max-h-[75px] w-full px-3 py-1 shadow">
       <div className="row-flex-btwn mx-auto gap-4 w-full">
-        <div className="icon group sm:!hidden" onClick={() => setOpenMenu && setOpenMenu(true)}>
+        <div
+          className="icon group -mt-[0.15rem] sm:!hidden"
+          onClick={() => setOpenMenu && setOpenMenu(true)}
+        >
           <MenuIcon className="size-6 transition-all group-hover:scale-95" color="#333" />
         </div>
 
