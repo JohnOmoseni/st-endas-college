@@ -1,6 +1,5 @@
 import { testimonials } from "@/constants/dashboard-index";
 import { cn } from "@/lib/utils";
-import { useState } from "react";
 
 function Testimonials() {
   return (
@@ -14,7 +13,6 @@ function Testimonials() {
 
         <ul className="mt-10 gap-6 grid grid-cols-[repeat(auto-fit,_minmax(220px,_1fr))]">
           {testimonials.map(({ img, name, tag, body }, idx) => {
-            const [lineClamp, setLineClamp] = useState(true);
             return (
               <li
                 key={idx}
@@ -32,23 +30,7 @@ function Testimonials() {
                   </div>
                 </div>
 
-                <p
-                  className={cn(
-                    "relative pr-0.5 leading-[1.35rem] tracking-tight",
-                    lineClamp ? "line-clamp-6 md:line-clamp-[8] text-justify" : ""
-                  )}
-                >
-                  {body}
-                  <span
-                    className={cn(
-                      "absolute bottom-0 w-2 text-center  leading-[1.5] right-[0.25rem] whitespace-nowrap cursor-pointer z-50",
-                      lineClamp ? "inline-block " : "hidden"
-                    )}
-                    onClick={() => setLineClamp(!lineClamp)}
-                  >
-                    ..
-                  </span>
-                </p>
+                <p className={cn("relative pr-0.5 leading-[1.35rem] tracking-tight")}>{body}</p>
               </li>
             );
           })}

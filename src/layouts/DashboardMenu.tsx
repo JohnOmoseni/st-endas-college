@@ -41,7 +41,7 @@ function Menu({ openMenu, setOpenMenu }: MenuProps) {
           </nav>
 
           <a
-            href="https://futurebridge.ng/"
+            href="https://futurebridge.com.ng/"
             target="_blank"
             rel="noopener noreferrer"
             className="mx-auto row-flex mt-auto"

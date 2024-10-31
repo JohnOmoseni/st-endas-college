@@ -35,7 +35,7 @@ function Header2({ setOpenMenu }: HeaderProps) {
         </div>
 
         <a
-          href="https://futurebridge.ng/"
+          href="https://futurebridge.com.ng/"
           target="_blank"
           rel="noopener noreferrer"
           className={cn("sm:row-flex hidden mr-[2%]")}
